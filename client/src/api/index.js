@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+const baseURL = 'https://mern-memories-luukeeeee.herokuapp.com/' || 'http://localhost:5000';
+
+const API = axios.create({ baseURL });
 
 // pass token to backend middleware
 API.interceptors.request.use(req => {
